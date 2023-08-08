@@ -4,7 +4,11 @@ import(
 	"fmt"
 )
 
+var i = 45
+
 func main()  {
+
+	var i = 55
 	varInt := 12
 	varString :="toto"
 	tata := "tata"
@@ -23,4 +27,19 @@ func main()  {
 	fmt.Printf("value : %v\n", varFloat)
 	fmt.Printf("Type : %T\n", varFloat)
 
-}    
+	fmt.Printf("value i  : %v\n", i)
+
+	for true{
+		i:=11
+		fmt.Printf("value : %v\n", i)
+		i=12
+		fmt.Printf("value : %v\n", i)
+		break
+	}
+
+	toto()
+} 
+
+func toto (){
+	fmt.Printf("value i  : %v\n", i)
+}
