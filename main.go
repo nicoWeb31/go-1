@@ -5,6 +5,7 @@ import(
 )
 
 var i = 45
+var a =100
 
 func main()  {
 
@@ -38,8 +39,27 @@ func main()  {
 	}
 
 	toto()
+	pointer()
+
+	fmt.Printf("scop a 1 : %v\n", a)
+	  a := 200
+	fmt.Printf("scop a 2 : %v \n", a)
 } 
 
 func toto (){
 	fmt.Printf("value i  : %v\n", i)
+}
+
+
+
+func pointer(){
+	//This is because receipt and receipt2 pointing to the same coat.
+//The operator & means “give me the address of the variable”. So this is de-referecing. The memory address ist the place where the data is stored.
+//The operator * means tread this as a pointer. So *receipt fetches the address stored in receipt and uses the content which is stored there.
+	coat := "I am a coat"
+	receipt := &coat
+	receipt2 := &coat  
+	fmt.Println(*receipt)      
+	fmt.Println(*receipt2)
+  
 }
